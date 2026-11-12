@@ -25,7 +25,7 @@
   </style>
 </head>
 <body>
-  <header class="bar"><span class="title">PENERIMAAN TAMU · AKSES PETUGAS</span><div class="tools" id="tools" hidden><a id="open-app" target="_blank" rel="noopener noreferrer">Masuk & beri izin Google ↗</a><button id="reload-app" type="button">Muat ulang</button></div></header>
+  <header class="bar"><span class="title">PENERIMAAN TAMU · SARASEHAN80</span><div class="tools" id="tools" hidden><button id="reload-app" type="button">Muat ulang</button></div></header>
   <main>
     <section class="message" id="message" role="status"><h1>Aplikasi belum disiapkan</h1><p id="message-text">Pengelola perlu memasukkan alamat deployment Apps Script setelah pengujian. Belum ada daftar tamu pada halaman ini.</p></section>
     <iframe id="app" title="Aplikasi penerimaan tamu untuk petugas" referrerpolicy="no-referrer" hidden></iframe>
@@ -60,7 +60,6 @@
             !/^new-[0-9a-f-]{36}$/.test(event.data.nonce)) return;
         event.source.postMessage({type:'ARHANUD80_EMBED_ACK', nonce:event.data.nonce}, event.origin);
       });
-      document.getElementById('open-app').href = APP_URL;
       document.getElementById('reload-app').addEventListener('click', () => { frame.src = APP_URL; });
       frame.src = APP_URL; frame.hidden = false; tools.hidden = false; message.hidden = true;
     })();
