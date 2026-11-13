@@ -35,7 +35,7 @@
       'use strict';
       // PENGELOLA: isi hanya dengan URL /exec dari proyek Apps Script BARU yang
       // sudah diuji. URL ini bukan sandi. Jangan tempel data tamu atau token.
-      const APP_URL = 'https://script.google.com/macros/s/AKfycby4kpyUvtK-74xiRnOLV_Zfui7Wiepu2b5vhx04x8rMMO_rtPiEQYxAhH3tq1Y5YHMB/exec';
+      const APP_URL = 'https://script.google.com/a/~/macros/s/AKfycby4kpyUvtK-74xiRnOLV_Zfui7Wiepu2b5vhx04x8rMMO_rtPiEQYxAhH3tq1Y5YHMB/exec';
       const frame = document.getElementById('app'), message = document.getElementById('message');
       const text = document.getElementById('message-text'), tools = document.getElementById('tools');
       // Do not load the app when this wrapper is itself embedded on another site.
@@ -47,7 +47,7 @@
         text.textContent = 'HTTPS yang valid diperlukan. Jangan masukkan data atau kata sandi pada halaman HTTP; hubungi pengelola.';
         return;
       }
-      if (!/^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(APP_URL)) {
+      if (!/^https:\/\/script\.google\.com\/a\/~\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(APP_URL)) {
         text.textContent = 'Alamat deployment Apps Script belum diisi atau tidak valid. Hubungi pengelola.';
         return;
       }
